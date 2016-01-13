@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 class App extends React.Component {
     constructor(props) {
         super(props);
-        let { name, color } = props
+        let { name, color } = props;
 
         this.state = { name, color }
     }
@@ -32,13 +32,13 @@ class App extends React.Component {
     render() {
         const { name, color } = this.state;
         return (
-            <div className='container' style={{color}}>
+            <div className='container' style={{ color }}>
                 <label>What's your name?</label>
-                <input type='text' onChange={this.updateName}/>
+                <input type='text' defaultValue={ name } onChange={this.updateName}/>
                 <label>What's your favorite color?</label>
-                <input type="text" defaultValue={color} onChange={this.updateColor}/>
-                <p>Your name is {this.state.name}</p>
-                <p>Your name is {this.state.color}</p>
+                <input type="text" defaultValue={ color } onChange={this.updateColor}/>
+                <p>Your name is { name }</p>
+                <p>Your name is { color }</p>
             </div>
         )
     }
